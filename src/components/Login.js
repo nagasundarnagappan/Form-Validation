@@ -104,17 +104,18 @@ const validatePassword=(event)=>{
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="xs" sx={{backgroundColor : "pink"}}>
         <CssBaseline />
         <Box
           sx={{
-            marginTop: 8,
+            marginTop: 25,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
+            
           }}
         >
-          <Box component="form"   sx={{ mt: 3 }}>
+          <Box component="form"   sx={{ mt: 3}} >
             <Grid container spacing={2}>
               <Grid item xs={12}> 
                 <TextField
