@@ -28,6 +28,7 @@ export default function SignUp() {
   const [password, setPassword] = useState('');
   const [colorp, setColorp] = useState('white');
   const [errorp, setErrorp] = useState('');
+  const [error, setError] = useState('true');
 
 const validateName=(event)=>{
     event.preventDefault();
@@ -35,10 +36,12 @@ const validateName=(event)=>{
     if(Name.length==0){
         setErrorn("UserName cannot be empty")
         setColorn("red")
+        setError("true")
       }else{
         setName(Name)
         setColorn("white")
         setErrorn("")
+        setError("false")
     }
     if(Name){
         console.log("Name: " ,Name)
@@ -94,11 +97,12 @@ const validatePassword=(event)=>{
         setErrore("Valid Mail");
       }else{
         setColore("red")
-        setErrore("Inalid Mail");
+        setErrore("Invalid Mail");
 
       }
   }
   const handleSubmit = (event) => {
+    if(error=="false" && errorp=="Password is Very Strong" && errore=="Valid Mail")
     alert("Success!!")
   };
 
